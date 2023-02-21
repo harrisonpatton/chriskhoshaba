@@ -375,6 +375,72 @@ svg:hover {
     height: 3.8rem;
     width: 3.8rem; } }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 1000px;
+  text-align: center;
+  margin: 0 auto; }
+
+.caption {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif; }
+
+.gallery__wrapper {
+  background-color: #f2f2f2;
+  box-shadow: 0px 0px 20px #818181;
+  margin-top: 100px; }
+
+.image-main {
+  line-height: 0;
+  height: 400px;
+  width: 1000px;
+  object-fit: contain; }
+
+.thumbnails {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 50px 0 50px 0;
+  margin: 0 150px 0 150px;
+  opacity: 1;
+  transition: opacity 1.85s; }
+
+.thumbnails li {
+  padding: 5px;
+  line-height: 0; }
+
+.gallery__img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover; }
+
+.gallery__img:hover {
+  opacity: 0.75;
+  cursor: pointer; }
+
+.arrows {
+  padding-top: 1%; }
+
+.material-icons {
+  padding: 0 15%;
+  cursor: pointer; }
+
+.fa-arrow-right::before,
+.fa-arrow-left::before {
+  font-size: 3rem; }
+
+/* .material-icons__left-btn {
+  padding-right: 100px;
+}
+
+.material-icons right-btn {
+  padding-left: 100px;
+} */
 .background-gallery::before {
   content: '';
   position: fixed;

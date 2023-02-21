@@ -16,86 +16,11 @@
       rel="stylesheet"
     />
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
 
     <title>Gallery</title>
   </head>
   <body>
-    <script>
-      //Make gallery images larger when clicked
-      window.onload = function () {
-        const images = document.querySelectorAll('.gallery img');
-        const imageContainer = document.querySelector('.image-container');
-
-        images.forEach((img) => {
-          img.addEventListener('click', () => {
-            imageContainer.innerHTML = '<span class="close">&times;</span>';
-
-            const fullScreenImage = new Image();
-            fullScreenImage.src = img.src;
-            fullScreenImage.style.maxWidth = '100%';
-            fullScreenImage.style.maxHeight = '100%';
-            fullScreenImage.style.margin = 'auto';
-            fullScreenImage.style.display = 'block';
-
-            imageContainer.appendChild(fullScreenImage);
-            imageContainer.style.display = 'flex';
-
-            const closeButton = imageContainer.querySelector('.close');
-            closeButton.addEventListener('click', () => {
-              imageContainer.style.display = 'none';
-            });
-          });
-        });
-
-        //arrow functionality
-
-        const selectedImage = document.getElementById('selected-image');
-        const leftArrow = document.getElementById('left-arrow');
-        const rightArrow = document.getElementById('right-arrow');
-
-        selectedImage.addEventListener('click', function () {
-          if (leftArrow.style.display === 'block') {
-            leftArrow.style.display = 'none';
-            rightArrow.style.display = 'none';
-          } else {
-            leftArrow.style.display = 'block';
-            rightArrow.style.display = 'block';
-          }
-        });
-
-        let currentImageIndex = 0;
-
-        function updateSelectedImage() {
-          selectedImage.src = images[currentImageIndex].src;
-        }
-
-        leftArrow.addEventListener('click', function () {
-          currentImageIndex = currentImageIndex - 1;
-          if (currentImageIndex < 0) {
-            currentImageIndex = images.length - 1;
-          }
-          updateSelectedImage();
-        });
-
-        rightArrow.addEventListener('click', function () {
-          currentImageIndex = currentImageIndex + 1;
-          if (currentImageIndex >= images.length) {
-            currentImageIndex = 0;
-          }
-          updateSelectedImage();
-        });
-      };
-      function showImage(img) {
-        var image = document.getElementsByClassName('thumbnail');
-        if (image) {
-          image.src = event.target;
-        } else {
-          console.error('Image element not found.');
-        }
-        document.querySelector('#selected-image').src = img.src;
-        document.querySelector('.image-container').style.display = 'flex';
-      }
-    </script>
     <!--Navigation Bar -->
     <nav class="nav nav__nothome">
       <ul class="dropdown-menu dropdown-menu__nothome">
@@ -111,76 +36,36 @@
     <!--Background-->
     <div class="background-gallery">
       <h1 class="gallery-title">Gallery</h1>
-            <!--King Christoph Photos--> 
-            <h2 class="gallery-showtitle">
-              The Tragedy of King Christoph - House Theatre
-            </h1>
-            <div class="gallery gallery-tkc">
-              <img
-                src="../img/tkc-1.jpg"
-                class="thumbnail"
-                onclick="showImage(this)"
-                alt="King Christoph 1"
-              />
-              <img
-                src="../img/tkc-3.jpg"
-                class="thumbnail"
-                onclick="showImage(this)"
-                alt="King Christoph 2"
-              />
-              <img
-                src="../img/tkc-2.jpg"
-                class="thumbnail"
-                onclick="showImage(this)"
-                alt="King Christoph 3"
-              />
-              <img
-                src="../img/tkc-4.jpg"
-                class="thumbnail"
-                onclick="showImage(this)"
-                alt="King Christoph 4"
-              />
-            </div>
-            <!--Rent Photos-->
-      <h2 class="gallery-showtitle">Rent-Porchlight Theatre</h2>
+    <div class="container">
 
-    
-      <div class="gallery">
-        <img
-          src="../img/rent-1.jpg"
-          class="thumbnail"
-          onclick="showImage(this)"
-          alt="Rent Cast"
-        />
-        <img
-          src="../img/rent-2.jpg"
-          class="thumbnail"
-          onclick="showImage(this)"
-          alt="Rent Cast"
-        />
-        <img
-          src="../img/rent-3.jpg"
-          class="thumbnail"
-          onclick="showImage(this)"
-          alt="Rent Dance"
-        />
-        <img
-          src="../img/rent-4.jpg"
-          class="thumbnail"
-          onclick="showImage(this)"
-          alt="Rent Diner"
-        />
-      </div>
-
-      <div class="image-container">
-        <div class="img-wrapper">
-          <img src="" id="selected-image" />
-          <span id="left-arrow">&larr;</span>
-          <span id="right-arrow">&rarr;</span>
-          <span class="close">&times;</span>
+      <div class="gallery__wrapper">
+        <div class="image-main__wrapper">
+          <figure>
+          <img class="image-main" src="../img/tkc-1.jpg">
+          <figcaption class="caption"></figcaption>
+        </figure>
+          <div id="arrows">
+            <i class='material-icons left-btn fa fa-arrow-left' aria-hidden="true"></i>
+            <i class='material-icons right-btn fa fa-arrow-right' aria-hidden="true"></i>
+          </div>
+          <div class="image-thumbnails__wrapper">
+            <ul class="thumbnails">
+              <li><img id="thumb-1" class="gallery__img" src="../img/tkc-1.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-2" class="gallery__img" src="../img/tkc-2.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-3" class="gallery__img" src="../img/tkc-3.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-4" class="gallery__img" src="../img/tkc-4.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-5" class="gallery__img" src="../img/rent-1.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-6" class="gallery__img" src="../img/rent-2.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-7" class="gallery__img" src="../img/rent-3.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-8" class="gallery__img" src="../img/rent-4.jpg" data-caption="Rent, Porchlight Theatre"></li>
+            </ul>
+          </div>
         </div>
       </div>
+  
     </div>
+  
+    <script src="../gallery.js"></script>
     <!--FOOTER-->
     <footer id="footer" class="footer">
       <h1 class="footer-connect">
