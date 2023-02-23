@@ -30,7 +30,7 @@
   &-subtitle {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    font-size: 3vw;
+    font-size: 4vw;
     text-align: center;
     padding-top: 3%;
     color: black;
@@ -43,11 +43,54 @@
   text-align: center;
   padding: 5%;
 
-  &:focus {
-    width: 100%;
+  &:hover {
+    cursor: pointer;
   }
 
   &-wrapper {
     text-align: center;
   }
+  &-btn {
+    padding: 1rem 6vw;
+    background-color: #76b5c5;
+    border: none;
+    border-radius: 5px;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: white;
+  }
+  &-btn a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+//Modal Styling
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  overflow: auto;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#modal img {
+  width: 90vw;
+}
+
+#my-image:active {
+  opacity: 0.5;
 }

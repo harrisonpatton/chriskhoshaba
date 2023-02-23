@@ -9,7 +9,7 @@
 
   // function to update the main image and caption
   function updateMainImage(index) {
-    imageMain.src = thumbnails[index].src.replace('150/100', '1000/400');
+    imageMain.src = thumbnails[index].src.replace('150/100', '1000/400'); //Replaces large image with whichever thumbnail was clicked
     captionElement.textContent = thumbnails[index].dataset.caption;
     imageMain.alt = thumbnails[index].dataset.caption;
     imageMain.title = thumbnails[index].dataset.caption;
@@ -17,7 +17,7 @@
 
   for (let i = 0; i < thumbnails.length; i++) {
     thumbnails[i].addEventListener('click', function (evt) {
-      currentIndex = evt.target.id.substr(6, evt.target.id.length) - 1; //Updates current index by getting the substring of the ID attribute of the gallery__img, starting at the 6th character (which is the number) and ending at the end of the string. We then subtract 1 from this so that is can be zero based, otherwise the JS will display the image that is one number higher, since arrays start at 0.
+      currentIndex = evt.target.id.substr(6, evt.target.id.length) - 1; //Updates current index by getting the substring of the ID attribute of the gallery__img that was clicked on, starting at the 6th character (which is the number) and ending at the end of the string. We then subtract 1 from this so that is can be zero based, otherwise the JS will display the image that is one number higher, since arrays start at 0.
       updateMainImage(currentIndex);
     });
   }

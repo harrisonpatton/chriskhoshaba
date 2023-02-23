@@ -33,21 +33,61 @@
       </ul>
     </nav>
     <div class="background-work">
-      <h1 class="work-title">Work</h1>
-      <h2 class="work-subtitle">Past, Present, & Upcoming</h2>
-      <h2 class="work-subtitle">
-        Coming Soon - Layalina (u/s) at Goodman Theatre
-      </h2>
+      <div class="container">
+        <h1 class="work-title">Work</h1>
+        <h2 class="work-subtitle">Past, Present, & Upcoming</h2>
+        <h2 class="work-subtitle">
+          Coming Soon - Layalina (u/s) at Goodman Theatre
+        </h2>
+        <a
+          href="../img/khoshaba-resume.png"
+          download="../img/khoshaba-resume.png"
+          ><button class="btn resume-btn">Download Resume</button></a
+        >
+      </div>
 
       <div class="resume-wrapper">
-        <a href="../img/khoshaba-resume.png" download="Chris Khoshaba Resume">
-          <img
-            src="../img/khoshaba-resume.png"
-            alt="Chris Khoshaba Resume"
-            class="resume"
-        /></a>
+        <img
+          src="../img/khoshaba-resume.png"
+          alt="Chris Khoshaba Resume"
+          class="resume"
+          id="resume"
+        />
+        <div id="overlay">
+          <div id="modal">
+            <img
+              src="../img/khoshaba-resume.png"
+              alt="Chris Khoshaba Resume"
+              class="resume"
+            />
+          </div>
+        </div>
       </div>
     </div>
+    <!--Javascript for Resume Modal Overlay-->
+    <script>
+      // Get a reference to the image element
+      var img = document.getElementById('resume');
+
+      // Get a reference to the overlay and modal elements
+      var overlay = document.getElementById('overlay');
+      var modal = document.getElementById('modal');
+
+      // Add a click event listener to the image
+      img.addEventListener('click', function () {
+        // Set the source of the image in the modal to the same source as the clicked image
+        modal.getElementsByTagName('img')[0].src = img.src;
+
+        // Show the overlay
+        overlay.style.display = 'block';
+      });
+
+      // Add a click event listener to the overlay
+      overlay.addEventListener('click', function () {
+        // Hide the overlay
+        overlay.style.display = 'none';
+      });
+    </script>
     <!--FOOTER-->
     <footer id="footer" class="footer">
       <h1 class="footer-connect">

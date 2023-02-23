@@ -804,7 +804,7 @@ li a:hover:before {
 .work-subtitle {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
-  font-size: 3vw;
+  font-size: 4vw;
   text-align: center;
   padding-top: 3%;
   color: black; }
@@ -814,7 +814,43 @@ li a:hover:before {
   height: 100%;
   text-align: center;
   padding: 5%; }
-  .resume:focus {
-    width: 100%; }
+  .resume:hover {
+    cursor: pointer; }
   .resume-wrapper {
     text-align: center; }
+  .resume-btn {
+    padding: 1rem 6vw;
+    background-color: #76b5c5;
+    border: none;
+    border-radius: 5px;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: white; }
+  .resume-btn a {
+    text-decoration: none;
+    color: white; }
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  overflow: auto; }
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%; }
+
+#modal img {
+  width: 90vw; }
+
+#my-image:active {
+  opacity: 0.5; }
