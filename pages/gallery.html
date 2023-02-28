@@ -36,8 +36,38 @@
     <!--Background-->
     <div class="background-gallery">
       <h1 class="gallery-title">Gallery</h1>
+      <ul class="gallery-menu">
+        <li>Headshots</li>
+        <li>Show Photos</li>
+        <li>Performance Videos</li>
+      </ul>
     <div class="container">
-
+<section id="headshots">
+  <h1 class="gallery-title">Headshots</h1>
+  <div class="gallery__wrapper">
+    <div class="headshot-main__wrapper">
+      <figure>
+      <img class="headshot-main" src="../img/chris-headshot-main.jpg">
+    </figure>
+      <div id="arrows">
+        <i class='fa fa-arrow-left headshot-arrow__left' aria-hidden="true"></i>
+        <i class=' fa fa-arrow-right headshot-arrow__right' aria-hidden="true"></i>
+      </div>
+      <div class="headshot-thumbnails__wrapper">
+        <ul class="headshot-thumbnails">
+          <li><img id="headshot-1" class="headshot__img" src="../img/chris-about.jpg"></li>
+          <li><img id="headshot-2" class="headshot__img" src="../img/chris-headshot-3.jpg"></li>
+          <li><img id="headshot-3" class="headshot__img" src="../img/chris-headshot-serious.jpg" ></li>
+          <li><img id="headshot-4" class="headshot__img" src="../img/hero-desktop.jpg"></li>
+          <li><img id="headshot-5" class="headshot__img" src="../img/chris-headshot-main.jpg" ></li>
+          <li><img id="headshot-6" class="headshot__img" src="../img/chris-about.jpg" ></li>
+          <li><img id="headshot-7" class="headshot__img" src="../img/rent-3.jpg" ></li>
+          <li><img id="headshot-8" class="headshot__img" src="../img/rent-4.jpg"></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
       <div class="gallery__wrapper">
         <div class="image-main__wrapper">
           <figure>
@@ -62,7 +92,9 @@
           </div>
         </div>
       </div>
-  
+<div class="videos">
+  <iframe scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6IjgxNDAxNzUiLCJhbnZhY2siOiJ2THJvQkE5WkJHM0p3VHZhT2xpYmJ0b1BiNkw0anFKbCIsInNoYXJlTGluayI6Imh0dHBzOi8vd2dudHYuY29tL21vcm5pbmctbmV3cy9hcm91bmQtdG93bi9hcm91bmQtdG93bi1wcmV2aWV3cy1wb3JjaGxpZ2h0LW11c2ljLXRoZWF0cmVzLXJlbnQvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6IndnbnR2LmNvbSIsInZlcnNpb24iOiI1LjIuMCIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJjMyI6IndnbnR2LmNvbSIsIm5zX3N0X3N0Ijoid2duIiwibnNfc3RfcHUiOiJOZXhzdGFyIiwibnNfc3RfZ2UiOiJNb3JuaW5nIE5ld3MiLCJjc191Y2ZyIjoiIn19LCJkZnAiOnsiY2xpZW50U2lkZSI6eyJhZFRhZ1VybCI6Imh0dHBzOi8vcHViYWRzLmcuZG91YmxlY2xpY2submV0L2dhbXBhZC9hZHM%2Fc3o9MXgxMDAwJml1PS81Njc4L254LndnbnR2L21vcm5pbmdfbmV3cy9hcm91bmRfdG93biZwcD1WT0QmaW1wbD1zJmdkZnBfcmVxPTEmZW52PXZwJm91dHB1dD12bWFwJnVudmlld2VkX3Bvc2l0aW9uX3N0YXJ0PTEmYWRfcnVsZT0xJmRlc2NyaXB0aW9uX3VybD1odHRwczovL3dnbnR2LmNvbS9tb3JuaW5nLW5ld3MvYXJvdW5kLXRvd24vYXJvdW5kLXRvd24tcHJldmlld3MtcG9yY2hsaWdodC1tdXNpYy10aGVhdHJlcy1yZW50LyZwcGlkPTdjMTQ2YjM5LTg2MzktNDAwNS04MTQxLWMyYWZlMDE4NjIwMC0xNjc1MjYxOTQ3MDI4JmN1c3RfcGFyYW1zPXZpZCUzRDgxNDAxNzUlMjZjbXNpZCUzRDIxNDY4MDYlMjZwaWQlM0QyMTQ2ODA2JTI2cGVyc19jaWQlM0RueHN0cmliLTUtYXJ0aWNsZS0yMTQ2ODA2JTI2dmlkY2F0JTNEJTJGbW9ybmluZ19uZXdzJTJGYXJvdW5kX3Rvd24lMjZib2JfY2slM0QlNUJib2JfY2tfdmFsJTVEJTI2ZF9jb2RlJTNEMSUyNnBhZ2V0eXBlJTNEc3RvcnklMjZobG1ldGElM0Rhcm91bmQrdG93bitwcmV2aWV3cytwb3JjaGxpZ2h0K211c2ljK3RoZWF0cmVzK3JlbnQlMjZhYSUzRGYlMjZwbGF5ZXJ3aWR0aCUzRDc0MCUyNnBsYXllcmhlaWdodCUzRDQxNiUyNnVwaWQlM0Q4MmJlOTViZi0wNWRkLTQ3YTItYTI4Mi1jYzhjNTQ0NTE5NmQlMjZjb250ZW50X2NhdCUzRElBQjElMjZjb250ZW50X2dlbnJlJTNEZXZlbnQlMjZubHBjYXQxJTNEYXJ0c19lbnRlcnRhaW5tZW50JTJDYXJ0c19lbnRlcnRhaW5tZW50JTJDc2hvcHBpbmclMjZubHBjYXQyJTNEcGVyZm9ybWluZ19hcnRzJTJDZXZlbnRzX2xpc3RpbmdzJTI2bmxwc2VudCUzRDAlMjZ2cGlmJTNEdHJ1ZSUyNmNvbnRlbnRfbGVuJTNEMjE3IiwidnBhaWRNb2RlIjoiaW5zZWN1cmUifSwic2VydmVyU2lkZSI6eyJwcGlkIjoiN2MxNDZiMzktODYzOS00MDA1LTgxNDEtYzJhZmUwMTg2MjAwLTE2NzUyNjE5NDcwMjgiLCJkZXNjcmlwdGlvblVybCI6Imh0dHBzJTNBJTJGJTJGd2dudHYuY29tJTJGbW9ybmluZy1uZXdzJTJGYXJvdW5kLXRvd24lMkZhcm91bmQtdG93bi1wcmV2aWV3cy1wb3JjaGxpZ2h0LW11c2ljLXRoZWF0cmVzLXJlbnQlMkYiLCJwYXJhbXMiOiJwbGF5ZXJ3aWR0aCUzRDc0MCUyNnBsYXllcmhlaWdodCUzRDQxNiUyNnVwaWQlM0Q4MmJlOTViZi0wNWRkLTQ3YTItYTI4Mi1jYzhjNTQ0NTE5NmQifX0sIm5pZWxzZW4iOnsiYXBpZCI6IlBEMkVDNzA3Mi0yNzMwLTRDMzItQjJBMy1DOUFFRTc3ODI0RjQiLCJzZmNvZGUiOiJkY3IiLCJ0eXBlIjoiZGNyIiwiYXBuIjoiQW52YXRvIiwiZW52aXJvbm1lbnQiOiJwcm9kdWN0aW9uIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImFkbG9hZHR5cGUiOjIsImFkTW9kZWwiOjJ9LCJvcHRPdXQiOmZhbHNlfSwic2VnbWVudEN1c3RvbSI6eyJzY3JpcHQiOiJodHRwczovL3NlZ21lbnQucHNnLm5leHN0YXJkaWdpdGFsLm5ldC9hbnZhdG8uanMiLCJ3cml0ZUtleSI6Ill4bmkzSTE3T0trOUtUVWYxUm1tc3lZZXF4RmtFVG8yIiwicGx1Z2luc0xvYWRpbmdUaW1lb3V0IjoxMn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19LCJwYWwiOnsicHBpZCI6IjdjMTQ2YjM5LTg2MzktNDAwNS04MTQxLWMyYWZlMDE4NjIwMC0xNjc1MjYxOTQ3MDI4IiwiZGVzY3JpcHRpb25VcmwiOiJodHRwcyUzQSUyRiUyRndnbnR2LmNvbSUyRm1vcm5pbmctbmV3cyUyRmFyb3VuZC10b3duJTJGYXJvdW5kLXRvd24tcHJldmlld3MtcG9yY2hsaWdodC1tdXNpYy10aGVhdHJlcy1yZW50JTJGIiwibGlicmFyeVJlcXVlc3RlZCI6dHJ1ZSwicEluc3RhbmNlIjoicDEyNiJ9fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lJNE1UUXdNVGMxSWl3aWFYTnpJam9pZGt4eWIwSkJPVnBDUnpOS2QxUjJZVTlzYVdKaWRHOVFZalpNTkdweFNtd2lMQ0psZUhBaU9qRTJOemMxTXpNeE5ESjkuV3QzcmJKVHNBbGxPWWdlZzNTcVA3TE96eHdnVEljcW1XaDRVaGU3VURJZyJ9"  width ="640" height="360"></iframe>
+</div>
     </div>
   
     <script src="../gallery.js"></script>

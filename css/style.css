@@ -384,6 +384,14 @@ svg:hover {
   text-align: center;
   margin: 0 auto; }
 
+.gallery-menu {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5vw;
+  list-style: none;
+  padding: 2% 9%;
+  line-height: 5vw;
+  letter-spacing: 0.08rem; }
+
 .caption {
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
@@ -393,13 +401,16 @@ svg:hover {
   background-color: #76b5c5;
   margin-top: 1.75rem; }
 
-.image-main {
+.image-main,
+.headshot-main {
   line-height: 0;
   width: 100vw;
-  height: 400px;
+  height: 80vw;
+  max-height: 800px;
   object-fit: contain; }
 
-.thumbnails {
+.thumbnails,
+.headshot-thumbnails {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -408,17 +419,28 @@ svg:hover {
   opacity: 1;
   transition: opacity 1.85s; }
 
-.thumbnails li {
+.thumbnails li,
+.headshot-thumbnails li {
   padding: 5px;
   line-height: 0; }
 
-.gallery__img {
+.gallery__img,
+.headshot__img {
   width: 150px;
   height: 100px;
-  object-fit: cover; }
+  object-fit: cover;
+  background-position: center; }
+
+.headshot__img:hover {
+  opacity: 0.75;
+  cursor: pointer; }
 
 .gallery__img:hover {
   opacity: 0.75;
+  cursor: pointer; }
+
+.headshot-arrow__right, .headshot-arrow__left {
+  padding: 0 15%;
   cursor: pointer; }
 
 #arrows {
@@ -432,13 +454,6 @@ svg:hover {
 .fa-arrow-left::before {
   font-size: 3rem; }
 
-/* .material-icons__left-btn {
-  padding-right: 100px;
-}
-
-.material-icons right-btn {
-  padding-left: 100px;
-} */
 .background-gallery::before {
   content: '';
   position: fixed;
@@ -548,6 +563,14 @@ svg:hover {
   margin: auto;
   display: block; }
 
+.videos iframe {
+  width: auto; }
+
+@media screen and (min-width: 26.25em) {
+  .image-main,
+  .headshot-main {
+    height: 80vw; } }
+
 .hidden {
   display: none; }
 
@@ -571,14 +594,15 @@ svg:hover {
   content: '';
   position: fixed;
   width: 100%;
-  top: 0px;
+  top: 40px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url(../img/hero-mobile.jpg);
+  background-position: center;
+  background-image: url(../img/chris-headshot-main.JPG);
   opacity: 1;
   z-index: -1; }
 
@@ -627,7 +651,9 @@ svg:hover {
 
 @media screen and (min-width: 26.25em) {
   .hero-description {
-    display: none; } }
+    display: none; }
+  .hero::before {
+    top: 0px; } }
 
 @media screen and (max-width: 26.25em) {
   .hero-title {
@@ -750,7 +776,7 @@ li a:before {
   width: 0;
   height: 4px;
   background-color: #76b5c5;
-  transition: width 0.4s ease-in; }
+  transition: width 0.6s ease-in; }
 
 li a:hover:before {
   width: 100%; }
