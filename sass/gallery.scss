@@ -10,12 +10,27 @@
 }
 
 .gallery-menu {
+  display: flex;
+  flex-direction: column;
   font-family: 'Poppins', sans-serif;
-  font-size: 3.5vw;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-decoration: none;
   list-style: none;
+  margin-right: 5%;
   padding: 2% 9%;
-  line-height: 5vw;
+  padding-top: 0;
+  line-height: 2rem;
   letter-spacing: 0.08rem;
+}
+
+.gallery-menu a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .caption {
@@ -126,9 +141,8 @@
     font-family: 'Oxygen', sans-serif;
     font-size: 7vw;
     text-align: center;
-    padding-top: 3%;
+    padding: 3% 0;
     text-transform: uppercase;
-    letter-spacing: 1.6vw;
     color: white;
   }
 
@@ -234,5 +248,40 @@
   .image-main,
   .headshot-main {
     height: 80vw;
+  }
+  .gallery-menu {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 5% 11%;
+    padding-top: 0;
+    & li {
+      &:not(:last-child) {
+        margin-right: 4%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 31.25em) {
+  .gallery-menu {
+    font-size: 1.9rem;
+  }
+}
+
+@media screen and (min-width: 43.75em) {
+  .gallery-menu {
+    font-size: 2.4rem;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .gallery-menu {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .gallery-menu {
+    font-size: 3.5rem;
   }
 }
