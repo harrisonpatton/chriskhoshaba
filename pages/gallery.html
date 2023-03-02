@@ -48,7 +48,7 @@
     <h2 class="gallery-title">Headshots</h2>
     <div class="headshot-main__wrapper">
       <figure>
-      <img class="headshot-main" src="../img/chris-headshot-main.jpg">
+      <img id="headshot-main" class="headshot-main" src="../img/chris-headshot-main.jpg">
     </figure>
       <div id="arrows">
         <i class='fa fa-arrow-left headshot-arrow__left' aria-hidden="true"></i>
@@ -72,7 +72,7 @@
         <h2 class="gallery-title">Show Photos</h2>
         <div class="image-main__wrapper">
           <figure>
-          <img class="image-main" src="../img/tkc-1.jpg">
+          <img id="image-main" class="image-main" src="../img/tkc-1.jpg">
           <figcaption class="caption">The Tragedy of King Christoph, House Theatre</figcaption>
         </figure>
           <div id="arrows">
@@ -90,10 +90,52 @@
               <li><img id="thumb-7" class="gallery__img" src="../img/rent-3.jpg" data-caption="Rent, Porchlight Theatre"></li>
               <li><img id="thumb-8" class="gallery__img" src="../img/rent-4.jpg" data-caption="Rent, Porchlight Theatre"></li>
             </ul>
+            <div id="overlay__gallery">
+              <div id="modal__gallery">
+                <img class="image-main" src="../img/tkc-1.jpg">
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <!--Javascript for Imgage Modal Overlay-->
+    <script>
+      // Get a reference to the image element
+      let img = document.getElementById('image-main');
+      let headShot = document.getElementById('headshot-main');
+
+
+      // Get a reference to the overlay and modal elements
+      const overlay = document.getElementById('overlay__gallery');
+      const modal = document.getElementById('modal__gallery');
+
+            // Add a click event listener to the headshot
+            headShot.addEventListener('click', function () {
+        // Set the source of the image in the modal to the same source as the clicked image
+        modal.getElementsByTagName('img')[0].src = headShot.src;
+
+        // Show the overlay
+        overlay.style.display = 'block';
+      });
+
+      // Add a click event listener to the image
+      img.addEventListener('click', function () {
+        // Set the source of the image in the modal to the same source as the clicked image
+        modal.getElementsByTagName('img')[0].src = img.src;
+
+        // Show the overlay
+        overlay.style.display = 'block';
+      });
+
+      
+
+      // Add a click event listener to the overlay
+      overlay.addEventListener('click', function () {
+        // Hide the overlay
+        overlay.style.display = 'none';
+      });
+    </script>
     <section id="videos">
 <div class="videos">
   <h2 class="gallery-title">Performance Videos</h2>
