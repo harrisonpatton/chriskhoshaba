@@ -631,11 +631,17 @@ svg:hover {
 
 @media screen and (min-width: 50em) {
   .gallery-menu {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .fa-arrow-right::before,
+  .fa-arrow-left::before {
+    font-size: 3.5rem; } }
 
 @media screen and (min-width: 55em) {
   .gallery-menu {
-    font-size: 3.5rem; } }
+    font-size: 3.5rem; }
+  .fa-arrow-right::before,
+  .fa-arrow-left::before {
+    font-size: 4rem; } }
 
 .hidden {
   display: none; }
