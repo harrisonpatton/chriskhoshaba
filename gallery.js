@@ -113,3 +113,58 @@
   // initialize the main image and caption
   updateMainHeadshot(headshotCurrentIndex);
 })();
+
+//Video Gallery
+(function () {
+  const videosThumbnails = document.querySelectorAll('.videos__img'), //target thumbnail videos,
+    videosMain = document.querySelector('.videos-main'); //target main video
+  const videosLeftArrow = document.querySelector('.videos-arrow__left'),
+    videosRightArrow = document.querySelector('.videos-arrow__right');
+  let videosCurrentIndex = 0;
+
+  // function to update the main video and caption
+  function updateMainVideo(index) {
+    videosMain.src = videosThumbnails[index].src.replace('150/100', '1000/400'); //Replaces large video with whichever thumbnail was clicked
+    captionElement.textContent = videosThumbnails[index].dataset.caption;
+    videosMain.alt = videosThumbnails[index].dataset.caption;
+    videosMain.title = videosThumbnails[index].dataset.caption;
+  }
+
+  for (let i = 0; i < videosThumbnails.length; i++) {
+    videosThumbnails[i].addEventListener('click', function (evt) {
+      videosCurrentIndex = evt.target.id.substr(7, evt.target.id.length) - 1; //Updates current index by getting the substring of the ID attribute of the headshot__img that was clicked on, starting at the 9th character (which is the number) and ending at the end of the string. We then subtract 1 from this so that is can be zero based, otherwise the JS will display the image that is one number higher, since arrays start at 0.
+      updateMainVideo(videosCurrentIndex);
+    });
+  }
+
+  videosLeftArrow.addEventListener('click', function (evt) {
+    if (videosCurrentIndex > 0) {
+      videosCurrentIndex--;
+      updateMainVideo(videosCurrentIndex);
+    }
+  });
+
+  videosRightArrow.addEventListener('click', function (evt) {
+    if (videosCurrentIndex < videosThumbnails.length - 1) {
+      videosCurrentIndex++;
+      updateMainVideo(videosCurrentIndex);
+    }
+  });
+
+  // add keydown event listener to window
+  window.addEventListener('keydown', function (evt) {
+    if (evt.key === 'ArrowLeft' && videosCurrentIndex > 0) {
+      videosCurrentIndex--;
+      updateMainVideo(videosCurrentIndex);
+    } else if (
+      evt.key === 'ArrowRight' &&
+      videosCurrentIndex < videosThumbnails.length - 1
+    ) {
+      videosCurrentIndex++;
+      updateMainVideo(videosCurrentIndex);
+    }
+  });
+
+  // initialize the main video and caption
+  updateMainVideo(videosCurrentIndex);
+})();

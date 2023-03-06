@@ -425,7 +425,8 @@ svg:hover {
   cursor: pointer; }
 
 .thumbnails,
-.headshot-thumbnails {
+.headshot-thumbnails,
+.videos-thumbnails {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -435,17 +436,22 @@ svg:hover {
   transition: opacity 1.85s; }
 
 .thumbnails li,
-.headshot-thumbnails li {
+.headshot-thumbnails li,
+.videos-thumbnails li {
   padding: 5px;
   line-height: 0; }
 
 .gallery__img,
-.headshot__img {
+.headshot__img,
+.videos__img {
   width: 150px;
   height: 100px;
   object-fit: cover;
   background-position: center;
   cursor: pointer; }
+
+#anv-player-wrapper {
+  width: 150px !important; }
 
 .headshot__img:hover {
   opacity: 0.75;
@@ -455,7 +461,15 @@ svg:hover {
   opacity: 0.75;
   cursor: pointer; }
 
+.videos__img:hover {
+  opacity: 0.75;
+  cursor: pointer; }
+
 .headshot-arrow__right, .headshot-arrow__left {
+  padding: 0 15%;
+  cursor: pointer; }
+
+.videos-arrow__right, .videos-arrow__left {
   padding: 0 15%;
   cursor: pointer; }
 

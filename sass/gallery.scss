@@ -58,7 +58,8 @@
 }
 
 .thumbnails,
-.headshot-thumbnails {
+.headshot-thumbnails,
+.videos-thumbnails {
   list-style: none;
   display: flex;
   justify-content: center;
@@ -69,18 +70,24 @@
 }
 
 .thumbnails li,
-.headshot-thumbnails li {
+.headshot-thumbnails li,
+.videos-thumbnails li {
   padding: 5px;
   line-height: 0;
 }
 
 .gallery__img,
-.headshot__img {
+.headshot__img,
+.videos__img {
   width: 150px;
   height: 100px;
   object-fit: cover;
   background-position: center;
   cursor: pointer;
+}
+
+#anv-player-wrapper {
+  width: 150px !important;
 }
 
 .headshot__img:hover {
@@ -93,7 +100,20 @@
   cursor: pointer;
 }
 
+.videos__img:hover {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
 .headshot-arrow {
+  &__right,
+  &__left {
+    padding: 0 15%;
+    cursor: pointer;
+  }
+}
+
+.videos-arrow {
   &__right,
   &__left {
     padding: 0 15%;
