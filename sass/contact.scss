@@ -1,0 +1,188 @@
+.background-contact {
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #219ebc;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+#form .container {
+  max-width: 320px;
+  margin: auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 19vh;
+
+  &__input {
+    border: none;
+    background-color: transparent;
+
+    &--message {
+      border: 1px solid black;
+      width: 100%;
+    }
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+}
+
+input {
+  padding: 3%;
+  font-size: 3vw;
+}
+
+::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+//Hides up and down arrows on firefox
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+//Hides up and down arrows on Chrome, Safari, Edge, and Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea {
+  padding: 3%;
+  font-size: 3vh;
+}
+
+textarea::-webkit-input-placeholder {
+  color: black;
+}
+
+.contact {
+  &-title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 5vw;
+    text-align: center;
+    padding-top: 5%;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    color: white;
+    letter-spacing: 0.4vw;
+  }
+  &__form {
+    text-align: left;
+    display: flex;
+    padding-bottom: 0;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 5%;
+
+    &--message {
+      padding: 5% 0;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+
+    &--btn {
+      padding: 1rem 3rem;
+      background-color: #76b5c5;
+      border: none;
+      border-radius: 5px;
+      margin: 1rem 0;
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      color: #fff;
+
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        transform: translateY(3px);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 26.25em) {
+  .contact__form {
+    flex-direction: row;
+    margin-bottom: 5vw;
+  }
+
+  .form__input--message {
+    height: 20vh;
+    width: 64vw;
+  }
+
+  //adds a margin on the left for Firefox
+  @-moz-document url-prefix() {
+    .moz__form {
+      margin-left: 17vw;
+    }
+  }
+}
+
+@media screen and (max-width: 26.25em) {
+  .contact__form--message {
+    margin: 0 2%;
+  }
+}
+
+@media screen and (min-width: 26.25em) {
+  .form {
+    align-items: center;
+  }
+
+  #form .container {
+    max-width: 400px;
+    margin: 3% auto;
+  }
+
+  .contact__button--btn {
+    padding: 1.2rem 5rem;
+    font-size: 2rem;
+  }
+
+  //Stops form from getting squished in firefox
+  @-moz-document url-prefix() {
+    #form .container {
+      max-width: none;
+    }
+  }
+}
+
+@media screen and (min-width: 46.25em) {
+  .contact__button--btn {
+    padding: 1.2rem 8rem;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .contact__button--btn {
+    padding: 1.8rem 10rem;
+    font-size: 2.7rem;
+  }
+}

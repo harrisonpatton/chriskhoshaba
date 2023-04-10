@@ -1,0 +1,87 @@
+.hero {
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../img/chris-headshot-main.JPG);
+    opacity: 1;
+    z-index: -1;
+  }
+  &-description {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    &__title {
+      color: white;
+      font-family: 'Oxygen', sans-serif;
+      font-size: 6vw;
+      text-transform: uppercase;
+      letter-spacing: 0.5vw;
+      text-shadow: 0.5px 0.5px 0 black;
+      padding: 0 5%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.hero-title {
+  color: #76b5c5;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 6vw;
+  letter-spacing: 0.5vw;
+  text-shadow: 0.5px 0.5px 0 gray;
+  text-transform: uppercase;
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .hero {
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      max-height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url(../img/hero-desktop.jpg);
+      opacity: 1;
+      z-index: -1;
+    }
+  }
+}
+
+//Media Queries
+@media screen and (min-width: 26.25em) {
+  .hero-description {
+    display: none;
+  }
+  .hero {
+    &::before {
+      top: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 26.25em) {
+  .hero-title {
+    display: none;
+  }
+}

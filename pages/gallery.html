@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2&family=MedievalSharp&family=Montserrat:wght@400;500&family=Nunito:wght@300;400;700&family=Oxygen&family=Roboto:wght@100;300;400&family=Ubuntu:wght@300&family=Unbounded&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <title>Gallery</title>
+  </head>
+  <body>
+    <main>
+    <!--Navigation Bar -->
+    <nav class="nav nav__nothome">
+      <ul class="dropdown-menu dropdown-menu__nothome">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="work.html" class="nav-link">Work</a></li>
+        <li>
+          <a href="gallery.html" class="nav-link current-menu-item">Gallery</a>
+        </li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+    <!--Background-->
+    <div class="background-gallery">
+      <h1 class="gallery-title">Gallery</h1>
+      <ul class="gallery-menu">
+        <li> <a href="#headshots">Headshots</a></li>
+        <li> <a href="#gallery">Show Photos</a></li>
+        <li> <a href="#videos">Videos</a></li>
+      </ul>
+    <div class="container">
+<section id="headshots">
+  <div class="gallery__wrapper">
+    <h2 class="gallery-title">Headshots</h2>
+    <div class="headshot-main__wrapper">
+      <figure>
+      <img id="headshot-main" class="headshot-main" src="../img/chris-headshot-main.jpg">
+    </figure>
+      <div id="arrows">
+        <i class='fa fa-arrow-left headshot-arrow__left' aria-hidden="true"></i>
+        <i class=' fa fa-arrow-right headshot-arrow__right' aria-hidden="true"></i>
+      </div>
+      <div class="headshot-thumbnails__wrapper">
+        <ul class="headshot-thumbnails">
+          <li><img id="headshot-1" class="headshot__img" src="../img/chris-about.jpg"></li>
+          <li><img id="headshot-2" class="headshot__img" src="../img/chris-headshot-3.jpg"></li>
+          <li><img id="headshot-3" class="headshot__img" src="../img/chris-headshot-serious.jpg" ></li>
+          <li><img id="headshot-4" class="headshot__img" src="../img/hero-desktop.jpg"></li>
+          <li><img id="headshot-5" class="headshot__img" src="../img/chris-headshot-main.jpg" ></li>
+          <li><img id="headshot-6" class="headshot__img" src="../img/chris-about.jpg" ></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="gallery">
+      <div class="gallery__wrapper">
+        <h2 class="gallery-title">Show Photos</h2>
+        <div class="image-main__wrapper">
+          <figure>
+          <img id="image-main" class="image-main" src="../img/tkc-1.jpg">
+          <figcaption class="caption">The Tragedy of King Christoph, House Theatre</figcaption>
+        </figure>
+          <div id="arrows">
+            <i class='material-icons left-btn fa fa-arrow-left' aria-hidden="true"></i>
+            <i class='material-icons right-btn fa fa-arrow-right' aria-hidden="true"></i>
+          </div>
+          <div class="image-thumbnails__wrapper">
+            <ul class="thumbnails">
+              <li><img id="thumb-1" class="gallery__img" src="../img/tkc-1.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-2" class="gallery__img" src="../img/tkc-2.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-3" class="gallery__img" src="../img/tkc-3.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-4" class="gallery__img" src="../img/tkc-4.jpg" data-caption="The Tragedy of King Christoph, House Theatre"></li>
+              <li><img id="thumb-5" class="gallery__img" src="../img/rent-1.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-6" class="gallery__img" src="../img/rent-2.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-7" class="gallery__img" src="../img/rent-3.jpg" data-caption="Rent, Porchlight Theatre"></li>
+              <li><img id="thumb-8" class="gallery__img" src="../img/rent-4.jpg" data-caption="Rent, Porchlight Theatre"></li>
+            </ul>
+            <div id="overlay__gallery">
+              <div id="modal__gallery">
+                <img class="image-main" src="../img/tkc-1.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Javascript for Imgage Modal Overlay-->
+    <script>
+      // Get a reference to the image element
+      let img = document.getElementById('image-main');
+      let headShot = document.getElementById('headshot-main');
+
+
+      // Get a reference to the overlay and modal elements
+      const overlay = document.getElementById('overlay__gallery');
+      const modal = document.getElementById('modal__gallery');
+
+            // Add a click event listener to the headshot
+            headShot.addEventListener('click', function () {
+        // Set the source of the image in the modal to the same source as the clicked image
+        modal.getElementsByTagName('img')[0].src = headShot.src;
+
+        // Show the overlay
+        overlay.style.display = 'block';
+      });
+
+      // Add a click event listener to the image
+      img.addEventListener('click', function () {
+        // Set the source of the image in the modal to the same source as the clicked image
+        modal.getElementsByTagName('img')[0].src = img.src;
+
+        // Show the overlay
+        overlay.style.display = 'block';
+      });
+
+      
+
+      // Add a click event listener to the overlay
+      overlay.addEventListener('click', function () {
+        // Hide the overlay
+        overlay.style.display = 'none';
+      });
+    </script>
+    <section id="videos">
+<div class="videos">
+  <h2 class="gallery-title">Performance Videos</h2>
+  <div class="videos-main__wrapper">
+    <figure>
+  <iframe id="videos-main" class="videos-main" scrolling="no" frameborder="0" allowfullscreen webkitallowfullscreen mozallowfullscreen allow="autoplay; fullscreen" src="https://w3.mp.lura.live/player/prod/v3/anvload.html?key=eyJtIjoiTElOIiwidiI6IjgxNDAxNzUiLCJhbnZhY2siOiJ2THJvQkE5WkJHM0p3VHZhT2xpYmJ0b1BiNkw0anFKbCIsInNoYXJlTGluayI6Imh0dHBzOi8vd2dudHYuY29tL21vcm5pbmctbmV3cy9hcm91bmQtdG93bi9hcm91bmQtdG93bi1wcmV2aWV3cy1wb3JjaGxpZ2h0LW11c2ljLXRoZWF0cmVzLXJlbnQvIiwicGx1Z2lucyI6eyJjb21zY29yZSI6eyJjbGllbnRJZCI6IjYwMzY0MzkiLCJjMyI6IndnbnR2LmNvbSIsInZlcnNpb24iOiI1LjIuMCIsInVzZURlcml2ZWRNZXRhZGF0YSI6dHJ1ZSwibWFwcGluZyI6eyJjMyI6IndnbnR2LmNvbSIsIm5zX3N0X3N0Ijoid2duIiwibnNfc3RfcHUiOiJOZXhzdGFyIiwibnNfc3RfZ2UiOiJNb3JuaW5nIE5ld3MiLCJjc191Y2ZyIjoiIn19LCJkZnAiOnsiY2xpZW50U2lkZSI6eyJhZFRhZ1VybCI6Imh0dHBzOi8vcHViYWRzLmcuZG91YmxlY2xpY2submV0L2dhbXBhZC9hZHM%2Fc3o9MXgxMDAwJml1PS81Njc4L254LndnbnR2L21vcm5pbmdfbmV3cy9hcm91bmRfdG93biZwcD1WT0QmaW1wbD1zJmdkZnBfcmVxPTEmZW52PXZwJm91dHB1dD12bWFwJnVudmlld2VkX3Bvc2l0aW9uX3N0YXJ0PTEmYWRfcnVsZT0xJmRlc2NyaXB0aW9uX3VybD1odHRwczovL3dnbnR2LmNvbS9tb3JuaW5nLW5ld3MvYXJvdW5kLXRvd24vYXJvdW5kLXRvd24tcHJldmlld3MtcG9yY2hsaWdodC1tdXNpYy10aGVhdHJlcy1yZW50LyZwcGlkPTdjMTQ2YjM5LTg2MzktNDAwNS04MTQxLWMyYWZlMDE4NjIwMC0xNjc1MjYxOTQ3MDI4JmN1c3RfcGFyYW1zPXZpZCUzRDgxNDAxNzUlMjZjbXNpZCUzRDIxNDY4MDYlMjZwaWQlM0QyMTQ2ODA2JTI2cGVyc19jaWQlM0RueHN0cmliLTUtYXJ0aWNsZS0yMTQ2ODA2JTI2dmlkY2F0JTNEJTJGbW9ybmluZ19uZXdzJTJGYXJvdW5kX3Rvd24lMjZib2JfY2slM0QlNUJib2JfY2tfdmFsJTVEJTI2ZF9jb2RlJTNEMSUyNnBhZ2V0eXBlJTNEc3RvcnklMjZobG1ldGElM0Rhcm91bmQrdG93bitwcmV2aWV3cytwb3JjaGxpZ2h0K211c2ljK3RoZWF0cmVzK3JlbnQlMjZhYSUzRGYlMjZwbGF5ZXJ3aWR0aCUzRDc0MCUyNnBsYXllcmhlaWdodCUzRDQxNiUyNnVwaWQlM0Q4MmJlOTViZi0wNWRkLTQ3YTItYTI4Mi1jYzhjNTQ0NTE5NmQlMjZjb250ZW50X2NhdCUzRElBQjElMjZjb250ZW50X2dlbnJlJTNEZXZlbnQlMjZubHBjYXQxJTNEYXJ0c19lbnRlcnRhaW5tZW50JTJDYXJ0c19lbnRlcnRhaW5tZW50JTJDc2hvcHBpbmclMjZubHBjYXQyJTNEcGVyZm9ybWluZ19hcnRzJTJDZXZlbnRzX2xpc3RpbmdzJTI2bmxwc2VudCUzRDAlMjZ2cGlmJTNEdHJ1ZSUyNmNvbnRlbnRfbGVuJTNEMjE3IiwidnBhaWRNb2RlIjoiaW5zZWN1cmUifSwic2VydmVyU2lkZSI6eyJwcGlkIjoiN2MxNDZiMzktODYzOS00MDA1LTgxNDEtYzJhZmUwMTg2MjAwLTE2NzUyNjE5NDcwMjgiLCJkZXNjcmlwdGlvblVybCI6Imh0dHBzJTNBJTJGJTJGd2dudHYuY29tJTJGbW9ybmluZy1uZXdzJTJGYXJvdW5kLXRvd24lMkZhcm91bmQtdG93bi1wcmV2aWV3cy1wb3JjaGxpZ2h0LW11c2ljLXRoZWF0cmVzLXJlbnQlMkYiLCJwYXJhbXMiOiJwbGF5ZXJ3aWR0aCUzRDc0MCUyNnBsYXllcmhlaWdodCUzRDQxNiUyNnVwaWQlM0Q4MmJlOTViZi0wNWRkLTQ3YTItYTI4Mi1jYzhjNTQ0NTE5NmQifX0sIm5pZWxzZW4iOnsiYXBpZCI6IlBEMkVDNzA3Mi0yNzMwLTRDMzItQjJBMy1DOUFFRTc3ODI0RjQiLCJzZmNvZGUiOiJkY3IiLCJ0eXBlIjoiZGNyIiwiYXBuIjoiQW52YXRvIiwiZW52aXJvbm1lbnQiOiJwcm9kdWN0aW9uIiwidXNlRGVyaXZlZE1ldGFkYXRhIjp0cnVlLCJtYXBwaW5nIjp7ImFkbG9hZHR5cGUiOjIsImFkTW9kZWwiOjJ9LCJvcHRPdXQiOmZhbHNlfSwic2VnbWVudEN1c3RvbSI6eyJzY3JpcHQiOiJodHRwczovL3NlZ21lbnQucHNnLm5leHN0YXJkaWdpdGFsLm5ldC9hbnZhdG8uanMiLCJ3cml0ZUtleSI6Ill4bmkzSTE3T0trOUtUVWYxUm1tc3lZZXF4RmtFVG8yIiwicGx1Z2luc0xvYWRpbmdUaW1lb3V0IjoxMn0sImdvb2dsZUFuYWx5dGljcyI6eyJ0cmFja2luZ0lkIjoiIiwiZXZlbnRzIjp7IkFEX1NUQVJURUQiOnsiYWxpYXMiOiJWaWRlby1BZCIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19TVEFSVEVEIjp7ImFsaWFzIjoiVmlkZW8tUGxheSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19GSVJTVF9RVUFSVElMRSI6eyJhbGlhcyI6IlZpZGVvLTI1JSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJWSURFT19NSURfUE9JTlQiOnsiYWxpYXMiOiJWaWRlby01MCUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fVEhJUkRfUVVBUlRJTEUiOnsiYWxpYXMiOiJWaWRlby03NSUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVklERU9fQ09NUExFVEVEIjp7ImFsaWFzIjoiVmlkZW8tMTAwJSIsImNhdGVnb3J5IjoiVmlkZW8iLCJsYWJlbCI6IltbVElUTEVdXSJ9LCJVU0VSX1BBVVNFIjp7ImFsaWFzIjoiUGF1c2UiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifSwiVVNFUl9SRVNVTUUiOnsiYWxpYXMiOiJSZXN1bWUiLCJjYXRlZ29yeSI6IlZpZGVvIiwibGFiZWwiOiJbW1RJVExFXV0ifX19LCJwYWwiOnsicHBpZCI6IjdjMTQ2YjM5LTg2MzktNDAwNS04MTQxLWMyYWZlMDE4NjIwMC0xNjc1MjYxOTQ3MDI4IiwiZGVzY3JpcHRpb25VcmwiOiJodHRwcyUzQSUyRiUyRndnbnR2LmNvbSUyRm1vcm5pbmctbmV3cyUyRmFyb3VuZC10b3duJTJGYXJvdW5kLXRvd24tcHJldmlld3MtcG9yY2hsaWdodC1tdXNpYy10aGVhdHJlcy1yZW50JTJGIiwibGlicmFyeVJlcXVlc3RlZCI6dHJ1ZSwicEluc3RhbmNlIjoicDEyNiJ9fSwiaHRtbDUiOnRydWUsInRva2VuIjoiZXlKMGVYQWlPaUpLVjFRaUxDSmhiR2NpT2lKSVV6STFOaUo5LmV5SjJhV1FpT2lJNE1UUXdNVGMxSWl3aWFYTnpJam9pZGt4eWIwSkJPVnBDUnpOS2QxUjJZVTlzYVdKaWRHOVFZalpNTkdweFNtd2lMQ0psZUhBaU9qRTJOemMxTXpNeE5ESjkuV3QzcmJKVHNBbGxPWWdlZzNTcVA3TE96eHdnVEljcW1XaDRVaGU3VURJZyJ9"  width ="640" height="360"></iframe>
+  <figcaption class="caption">Rent-Around Town Solo at 2:35</figcaption>
+  </figure>
+    <div id="arrows">
+      <i class='fa fa-arrow-left videos-arrow__left' aria-hidden="true"></i>
+      <i class=' fa fa-arrow-right videos-arrow__right' aria-hidden="true"></i>
+    </div>
+    <div class="videos-thumbnails__wrapper">
+      <ul class="videos-thumbnails">
+      </ul>
+    </div>
+  </div>
+
+</div>
+</section>
+    </div>
+  
+    <script src="../gallery.js"></script>
+    <!--FOOTER-->
+    <footer id="footer" class="footer">
+      <h1 class="footer-connect">
+        <a href="contact.html">Connect With Me!</a>
+      </h1>
+      <button class="footer-btn"><a href="contact.html">Contact</a></button>
+      <!--SVG Icons-->
+      <div class="icons">
+        <!--Facebook SVG-->
+        <a href="https://www.facebook.com/christopher.khoshaba/">
+          <svg
+            class="icon icon-facebook"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <title>facebook</title>
+            <path
+              d="M19 6h5v-6h-5c-3.86 0-7 3.14-7 7v3h-4v6h4v16h6v-16h5l1-6h-6v-3c0-0.542 0.458-1 1-1z"
+            ></path>
+          </svg>
+        </a>
+        <!-- Instagram SVG -->
+        <a href="https://www.instagram.com/khoshy.711/">
+          <svg
+            class="icon icon-instagram"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <title>instagram</title>
+            <path
+              d="M16 2.881c4.275 0 4.781 0.019 6.462 0.094 1.563 0.069 2.406 0.331 2.969 0.55 0.744 0.288 1.281 0.638 1.837 1.194 0.563 0.563 0.906 1.094 1.2 1.838 0.219 0.563 0.481 1.412 0.55 2.969 0.075 1.688 0.094 2.194 0.094 6.463s-0.019 4.781-0.094 6.463c-0.069 1.563-0.331 2.406-0.55 2.969-0.288 0.744-0.637 1.281-1.194 1.837-0.563 0.563-1.094 0.906-1.837 1.2-0.563 0.219-1.413 0.481-2.969 0.55-1.688 0.075-2.194 0.094-6.463 0.094s-4.781-0.019-6.463-0.094c-1.563-0.069-2.406-0.331-2.969-0.55-0.744-0.288-1.281-0.637-1.838-1.194-0.563-0.563-0.906-1.094-1.2-1.837-0.219-0.563-0.481-1.413-0.55-2.969-0.075-1.688-0.094-2.194-0.094-6.463s0.019-4.781 0.094-6.463c0.069-1.563 0.331-2.406 0.55-2.969 0.288-0.744 0.638-1.281 1.194-1.838 0.563-0.563 1.094-0.906 1.838-1.2 0.563-0.219 1.412-0.481 2.969-0.55 1.681-0.075 2.188-0.094 6.463-0.094zM16 0c-4.344 0-4.887 0.019-6.594 0.094-1.7 0.075-2.869 0.35-3.881 0.744-1.056 0.412-1.95 0.956-2.837 1.85-0.894 0.888-1.438 1.781-1.85 2.831-0.394 1.019-0.669 2.181-0.744 3.881-0.075 1.713-0.094 2.256-0.094 6.6s0.019 4.887 0.094 6.594c0.075 1.7 0.35 2.869 0.744 3.881 0.413 1.056 0.956 1.95 1.85 2.837 0.887 0.887 1.781 1.438 2.831 1.844 1.019 0.394 2.181 0.669 3.881 0.744 1.706 0.075 2.25 0.094 6.594 0.094s4.888-0.019 6.594-0.094c1.7-0.075 2.869-0.35 3.881-0.744 1.050-0.406 1.944-0.956 2.831-1.844s1.438-1.781 1.844-2.831c0.394-1.019 0.669-2.181 0.744-3.881 0.075-1.706 0.094-2.25 0.094-6.594s-0.019-4.887-0.094-6.594c-0.075-1.7-0.35-2.869-0.744-3.881-0.394-1.063-0.938-1.956-1.831-2.844-0.887-0.887-1.781-1.438-2.831-1.844-1.019-0.394-2.181-0.669-3.881-0.744-1.712-0.081-2.256-0.1-6.6-0.1v0z"
+            ></path>
+            <path
+              d="M16 7.781c-4.537 0-8.219 3.681-8.219 8.219s3.681 8.219 8.219 8.219 8.219-3.681 8.219-8.219c0-4.537-3.681-8.219-8.219-8.219zM16 21.331c-2.944 0-5.331-2.387-5.331-5.331s2.387-5.331 5.331-5.331c2.944 0 5.331 2.387 5.331 5.331s-2.387 5.331-5.331 5.331z"
+            ></path>
+            <path
+              d="M26.462 7.456c0 1.060-0.859 1.919-1.919 1.919s-1.919-0.859-1.919-1.919c0-1.060 0.859-1.919 1.919-1.919s1.919 0.859 1.919 1.919z"
+            ></path>
+          </svg>
+        </a>
+
+        <!-- Email SVG (paper plane) -->
+        <a href="../pages/contact.html">
+          <svg
+            class="icon icon-paper-plane"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+          >
+            <title>paper-plane</title>
+            <path
+              d="M18.64 2.634c-0.344 0.121-17.321 6.104-17.656 6.222-0.284 0.1-0.347 0.345-0.010 0.479 0.401 0.161 3.796 1.521 3.796 1.521v0l2.25 0.901c0 0 10.838-7.958 10.984-8.066 0.148-0.108 0.318 0.095 0.211 0.211s-7.871 8.513-7.871 8.513v0.002l-0.452 0.503 0.599 0.322c0 0 4.65 2.504 4.982 2.682 0.291 0.156 0.668 0.027 0.752-0.334 0.099-0.426 2.845-12.261 2.906-12.525 0.079-0.343-0.148-0.552-0.491-0.431zM7 17.162c0 0.246 0.139 0.315 0.331 0.141 0.251-0.229 2.85-2.561 2.85-2.561l-3.181-1.644v4.064z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </footer>
+  </main>
+  </body>
+</html>

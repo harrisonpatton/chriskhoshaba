@@ -1,0 +1,24 @@
+.hidden {
+  display: none;
+}
+
+.fadeout {
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.margin-right {
+  margin-right: 2.5%;
+}
+
+.current-menu-item {
+  color: black !important;
+}
+
+.white-text {
+  color: white;
+}
+
+.large-text {
+  font-size: 1.7501rem;
+}

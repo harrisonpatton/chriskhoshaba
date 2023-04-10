@@ -1,0 +1,113 @@
+#footer {
+  background-color: #76b5c5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+//Footer CTA
+
+.footer {
+  &-connect {
+    padding: 5% 3%;
+    font-size: 3rem;
+    font-weight: 300;
+  }
+  &-connect a {
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: white;
+  }
+  &-btn {
+    padding: 1rem 3rem;
+    background-color: #219ebc;
+    border: none;
+    border-radius: 5px;
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+  }
+  &-btn a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+//Social Icons
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6% 0;
+}
+
+.icon {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 0;
+  stroke: currentColor;
+  margin-bottom: 5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-facebook {
+    background-image: url(../img/SVG/facebook.svg);
+    background-size: cover;
+    color: transparent;
+    margin-right: 2.6rem;
+  }
+  &-instagram {
+    background-image: url(../img/SVG/instagram.svg);
+    background-size: cover;
+    color: transparent;
+    margin-right: 2.6rem;
+  }
+  &-paper-plane {
+    background-image: url(../img/SVG/paper-plane.svg);
+    background-size: cover;
+    color: transparent;
+  }
+}
+
+svg:hover {
+  fill: white;
+}
+
+//Media Queries
+
+@media screen and (min-width: 46.25em) {
+  .footer {
+    &-connect {
+      font-size: 4rem;
+    }
+    &-btn {
+      padding: 1.2rem 5rem;
+      font-size: 2rem;
+    }
+  }
+  .icon {
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 55em) {
+  .footer {
+    &-connect {
+      font-size: 4.8rem;
+    }
+    &-btn {
+      padding: 1.8rem 8rem;
+      font-size: 2.7rem;
+    }
+    .icon {
+      height: 3.8rem;
+      width: 3.8rem;
+    }
+  }
+}

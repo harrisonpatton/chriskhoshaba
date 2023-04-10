@@ -1,0 +1,142 @@
+.background-work {
+  &::before {
+    content: '';
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #219ebc;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+.work {
+  &-title {
+    font-family: 'Oxygen', sans-serif;
+    font-size: 7vw;
+    text-align: center;
+    padding-top: 3%;
+    text-transform: uppercase;
+    letter-spacing: 0.5vw;
+    color: white;
+  }
+
+  &-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    padding-top: 3%;
+    color: black;
+    line-height: 3rem;
+  }
+}
+
+.resume {
+  width: 80%;
+  height: 100%;
+  text-align: center;
+  padding: 5%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &-wrapper {
+    text-align: center;
+  }
+  &-btn {
+    padding: 1rem 6vw;
+    background-color: #76b5c5;
+    border: none;
+    border-radius: 5px;
+    margin: 1.5rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: white;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &-btn a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+//Modal Styling
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  overflow: auto;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 90%;
+  max-height: 90%;
+}
+
+#modal img {
+  width: 90vw;
+}
+
+#my-image:active {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 43.75em) {
+  .work {
+    &-info {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 3%;
+    }
+    &-subtitle {
+      text-align: left;
+      padding: 1rem;
+      width: 50%;
+      margin-right: 0.5rem;
+    }
+  }
+
+  .resume {
+    &-btn {
+      padding: 1.75rem 6vw;
+    }
+  }
+}
+
+@media screen and (min-width: 50em) {
+  .work {
+    &-info {
+      justify-content: center;
+    }
+    &-subtitle {
+      font-size: 2rem;
+    }
+  }
+  .large-text {
+    font-size: 2.25rem;
+  }
+  .resume {
+    &-btn {
+      font-size: 1.8rem;
+    }
+  }
+}
