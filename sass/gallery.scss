@@ -64,7 +64,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding: 5% 0;
+  padding: 2% 0;
   opacity: 1;
   transition: opacity 1.85s;
 }
@@ -164,9 +164,9 @@
 
   &-title {
     font-family: 'Oxygen', sans-serif;
-    font-size: 4vw;
+    font-size: 2.8rem;
     text-align: center;
-    padding: 5% 0;
+    padding: 3% 0;
     text-transform: uppercase;
     color: white;
   }
@@ -308,7 +308,7 @@
   .gallery-menu {
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 5% 11%;
+    padding: 0 11%;
     padding-top: 0;
     & li {
       &:not(:last-child) {
@@ -319,14 +319,24 @@
 }
 
 @media screen and (min-width: 31.25em) {
-  .gallery-menu {
-    font-size: 1.9rem;
+  .gallery {
+    &-title {
+      font-size: 3.4rem;
+    }
+    &-menu {
+      font-size: 1.9rem;
+    }
   }
 }
 
 @media screen and (min-width: 43.75em) {
-  .gallery-menu {
-    font-size: 2.4rem;
+  .gallery {
+    &-title {
+      font-size: 4rem;
+    }
+    &-menu {
+      font-size: 2.1rem;
+    }
   }
   .videos iframe {
     width: 500px;
@@ -335,8 +345,13 @@
 }
 
 @media screen and (min-width: 50em) {
-  .gallery-menu {
-    font-size: 3rem;
+  .gallery {
+    &-title {
+      font-size: 4.4rem;
+    }
+    &-menu {
+      font-size: 2.4rem;
+    }
   }
   .fa-arrow-right,
   .fa-arrow-left {
@@ -347,8 +362,13 @@
 }
 
 @media screen and (min-width: 55em) {
-  .gallery-menu {
-    font-size: 3.5rem;
+  .gallery {
+    &-title {
+      font-size: 5.5rem;
+    }
+    &-menu {
+      font-size: 2.6rem;
+    }
   }
   .fa-arrow-right,
   .fa-arrow-left {
