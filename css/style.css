@@ -507,7 +507,7 @@ svg:hover {
   padding: 3%; }
   .gallery-title {
     font-family: 'Oxygen', sans-serif;
-    font-size: 7vw;
+    font-size: 4vw;
     text-align: center;
     padding: 5% 0;
     text-transform: uppercase;
@@ -623,7 +623,7 @@ svg:hover {
 @media screen and (min-width: 26.25em) {
   .image-main,
   .headshot-main {
-    height: 70vh; }
+    height: 63vh; }
   .gallery-menu {
     flex-direction: row;
     justify-content: space-evenly;
