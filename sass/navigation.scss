@@ -73,11 +73,13 @@
     margin-right: 2%;
     margin-top: 2%;
     text-shadow: 0.5px 0.5px 0 #76b5c5;
+    text-transform: uppercase;
   }
 
   &__nothome {
     display: flex;
     padding: 0;
+    text-transform: uppercase;
   }
 }
 
@@ -145,7 +147,7 @@ li a:before {
   left: 0;
   width: 0;
   height: 4px;
-  background-color: #76b5c5;
+  background-color: #557174;
   transition: width 0.6s ease-in;
 }
 
@@ -157,7 +159,7 @@ li a:hover:before {
 .nav {
   &__nothome {
     display: flex;
-    background-color: #76b5c5;
+    background-color: #557174;
     justify-content: space-around;
     align-items: center;
     transition: all 0.2s;

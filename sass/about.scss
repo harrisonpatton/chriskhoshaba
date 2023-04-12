@@ -10,7 +10,7 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #219ebc;
+    background-color: #f7f7e8;
     opacity: 1;
     z-index: -1;
   }
@@ -32,25 +32,30 @@ body {
     text-align: center;
     padding-top: 3%;
     text-transform: uppercase;
-    letter-spacing: 0.2vw;
-    color: white;
+    letter-spacing: 0.4vw;
+    color: #557174;
+    font-family: 'Oswald', sans-serif;
   }
 
   &-content {
     margin-top: 4rem;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
+    padding-bottom: 7%;
+    letter-spacing: 0.2vw;
   }
 
   &-content span {
-    color: white;
+    color: #557174;
     font-size: 3.4rem;
     text-transform: uppercase;
   }
   &-paragraph {
     font-weight: 300;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-top: 1.4rem;
+    text-transform: uppercase;
+    text-align: left;
   }
 
   &-img {
@@ -152,7 +157,7 @@ body {
       font-size: 4.4rem;
     }
     &-paragraph {
-      font-size: 2.3rem;
+      font-size: 1.6rem;
     }
     &-skills {
       font-size: 2rem;
