@@ -23,11 +23,12 @@
   text-decoration: none;
   list-style: none;
   margin-right: 5%;
+  margin-top: 3%;
+  margin-bottom: 0;
   padding: 2% 9%;
   padding-top: 0;
   line-height: 2rem;
   letter-spacing: 0.08rem;
-  margin: 3%;
   text-transform: uppercase;
 }
 
@@ -48,7 +49,6 @@
 
 .gallery__wrapper {
   background-color: #f7f7e8;
-  margin-top: 1.75rem;
 }
 
 .image-main,
@@ -113,6 +113,7 @@
   &__left {
     padding: 0 15%;
     cursor: pointer;
+    color: #557174;
   }
 }
 
@@ -121,9 +122,14 @@
   &__left {
     padding: 0 15%;
     cursor: pointer;
+    color: #557174;
   }
 }
 
+.figure,
+figcaption {
+  color: #557174;
+}
 #arrows {
   padding-top: 2%;
 }
@@ -297,10 +303,6 @@
 }
 
 //VIDEOS
-
-#videos {
-  background-color: #76b5c5;
-}
 
 .videos iframe {
   width: auto;

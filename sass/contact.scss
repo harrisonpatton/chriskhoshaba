@@ -10,7 +10,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #219ebc;
+    background-color: #f7f7e8;
     opacity: 1;
     z-index: -1;
   }
@@ -76,13 +76,13 @@ textarea::-webkit-input-placeholder {
 
 .contact {
   &-title {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 5vw;
     text-align: center;
     padding-top: 5%;
     text-transform: uppercase;
     letter-spacing: 0.5vw;
-    color: white;
+    color: #557174;
     letter-spacing: 0.4vw;
   }
   &__form {
@@ -104,7 +104,7 @@ textarea::-webkit-input-placeholder {
 
     &--btn {
       padding: 1rem 3rem;
-      background-color: #76b5c5;
+      background-color: #557174;
       border: none;
       border-radius: 5px;
       margin: 1rem 0;

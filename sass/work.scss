@@ -10,7 +10,7 @@
     height: 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #219ebc;
+    background-color: #f7f7e8;
     opacity: 1;
     z-index: -1;
   }
@@ -18,17 +18,17 @@
 
 .work {
   &-title {
-    font-family: 'Oxygen', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 7vw;
     text-align: center;
     padding-top: 3%;
     text-transform: uppercase;
     letter-spacing: 0.5vw;
-    color: white;
+    color: #557174;
   }
 
   &-subtitle {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 1.5rem;
     text-align: center;
@@ -53,7 +53,7 @@
   }
   &-btn {
     padding: 1rem 6vw;
-    background-color: #76b5c5;
+    background-color: #557174;
     border: none;
     border-radius: 5px;
     margin: 1.5rem 0;
@@ -67,6 +67,7 @@
   &-btn a {
     text-decoration: none;
     color: white;
+    font-family: 'Oswald', sans-serif;
   }
 }
 
