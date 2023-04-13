@@ -1,7 +1,7 @@
 //Top Nav Bar
 .nav {
   display: none;
-  background-color: #76b5c5;
+  background-color: #557174;
   justify-content: flex-end;
   align-items: center;
   transition: all 0.2s;
@@ -139,6 +139,7 @@
   width: 100vw;
   justify-content: space-evenly;
   font-size: 4.5vw;
+  text-transform: uppercase;
 }
 
 //Hover Underline Effect

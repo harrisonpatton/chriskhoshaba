@@ -26,30 +26,31 @@
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-bottom: 19vh;
+  margin-bottom: 5vh;
 
   &__input {
     border: none;
     background-color: transparent;
 
     &--message {
-      border: 1px solid black;
+      border: 1px solid #557174;
       width: 100%;
     }
   }
 }
 
 input::-webkit-input-placeholder {
-  color: black;
+  color: #557174;
 }
 
 input {
   padding: 3%;
   font-size: 3vw;
+  text-transform: uppercase;
 }
 
 ::placeholder {
-  color: black;
+  color: #557174;
   opacity: 1;
 }
 
@@ -71,7 +72,7 @@ textarea {
 }
 
 textarea::-webkit-input-placeholder {
-  color: black;
+  color: #557174;
 }
 
 .contact {
@@ -161,7 +162,6 @@ textarea::-webkit-input-placeholder {
   }
 
   .contact__button--btn {
-    padding: 1.2rem 5rem;
     font-size: 2rem;
   }
 
@@ -175,14 +175,12 @@ textarea::-webkit-input-placeholder {
 
 @media screen and (min-width: 46.25em) {
   .contact__button--btn {
-    padding: 1.2rem 8rem;
     font-size: 2rem;
   }
 }
 
 @media screen and (min-width: 55em) {
   .contact__button--btn {
-    padding: 1.8rem 10rem;
     font-size: 2.7rem;
   }
 }

@@ -102,7 +102,7 @@ body::before {
       max-width: fit-content;
       margin: 0 6%; } }
   .about-title {
-    font-size: 5rem; }
+    font-size: 6rem; }
   .about-img {
     width: 40%;
     margin-right: 10%;
@@ -115,7 +115,7 @@ body::before {
     max-width: 750px;
     max-width: -moz-fit-content; }
   .about-title {
-    font-size: 6rem; }
+    font-size: 6.8rem; }
   .about-content span {
     font-size: 4.4rem; }
   .about-paragraph {
@@ -127,7 +127,7 @@ body::before {
   #about-info .container {
     max-width: 950px; }
   .about-title {
-    font-size: 7rem; }
+    font-size: 7.4rem; }
   .about-content span {
     font-size: 4.6rem; }
   .about-paragraph {
@@ -186,23 +186,24 @@ html {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  margin-bottom: 19vh; }
+  margin-bottom: 5vh; }
   .form__input {
     border: none;
     background-color: transparent; }
     .form__input--message {
-      border: 1px solid black;
+      border: 1px solid #557174;
       width: 100%; }
 
 input::-webkit-input-placeholder {
-  color: black; }
+  color: #557174; }
 
 input {
   padding: 3%;
-  font-size: 3vw; }
+  font-size: 3vw;
+  text-transform: uppercase; }
 
 ::placeholder {
-  color: black;
+  color: #557174;
   opacity: 1; }
 
 input[type='number'] {
@@ -218,7 +219,7 @@ textarea {
   font-size: 3vh; }
 
 textarea::-webkit-input-placeholder {
-  color: black; }
+  color: #557174; }
 
 .contact-title {
   font-family: 'Oswald', sans-serif;
@@ -281,7 +282,6 @@ textarea::-webkit-input-placeholder {
     max-width: 400px;
     margin: 3% auto; }
   .contact__button--btn {
-    padding: 1.2rem 5rem;
     font-size: 2rem; }
   @-moz-document url-prefix() {
     #form .container {
@@ -289,12 +289,10 @@ textarea::-webkit-input-placeholder {
 
 @media screen and (min-width: 46.25em) {
   .contact__button--btn {
-    padding: 1.2rem 8rem;
     font-size: 2rem; } }
 
 @media screen and (min-width: 55em) {
   .contact__button--btn {
-    padding: 1.8rem 10rem;
     font-size: 2.7rem; } }
 
 #footer {
@@ -420,6 +418,9 @@ svg:hover {
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
   margin-top: 0.5rem; }
+
+#gallery .caption {
+  color: #f7f7e8; }
 
 .gallery__wrapper {
   background-color: #f7f7e8; }
@@ -768,7 +769,7 @@ figcaption {
 
 .nav {
   display: none;
-  background-color: #76b5c5;
+  background-color: #557174;
   justify-content: flex-end;
   align-items: center;
   transition: all 0.2s;
@@ -878,7 +879,8 @@ figcaption {
   transition: all 0.2s ease;
   width: 100vw;
   justify-content: space-evenly;
-  font-size: 4.5vw; }
+  font-size: 4.5vw;
+  text-transform: uppercase; }
 
 li a {
   position: relative; }
@@ -963,6 +965,9 @@ li a:hover:before {
   padding-top: 3%;
   color: black;
   line-height: 3rem; }
+
+.headshot {
+  height: 20rem; }
 
 .resume {
   width: 80%;
