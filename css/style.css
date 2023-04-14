@@ -202,6 +202,12 @@ input {
   font-size: 3vw;
   text-transform: uppercase; }
 
+input,
+select,
+textarea {
+  color: #557174;
+  outline: #557174; }
+
 ::placeholder {
   color: #557174;
   opacity: 1; }

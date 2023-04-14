@@ -49,6 +49,14 @@ input {
   text-transform: uppercase;
 }
 
+//Make text typed by user same color as placeholder, and remove default blue outline when user fills in form
+input,
+select,
+textarea {
+  color: #557174;
+  outline: #557174;
+}
+
 ::placeholder {
   color: #557174;
   opacity: 1;
