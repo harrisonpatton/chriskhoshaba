@@ -48,6 +48,8 @@ body::before {
   margin-top: 1.4rem;
   text-transform: uppercase;
   text-align: left; }
+  .about-paragraph-bonus {
+    margin-top: 2%; }
 
 .about-img {
   margin-top: 2rem;
@@ -399,8 +401,6 @@ svg:hover {
 
 .gallery-menu {
   display: flex;
-  flex-direction: column;
-  font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 1.5rem;
   text-decoration: none;
@@ -412,7 +412,13 @@ svg:hover {
   padding-top: 0;
   line-height: 2rem;
   letter-spacing: 0.08rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 0 11%;
+  padding-top: 0; }
+  .gallery-menu li:not(:last-child) {
+    margin-right: 4%; }
 
 .gallery-menu a {
   color: black;
@@ -422,7 +428,9 @@ svg:hover {
 
 .caption {
   font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.1vw;
+  text-transform: uppercase;
   margin-top: 0.5rem; }
 
 #gallery .caption {
@@ -531,6 +539,7 @@ figcaption {
     text-align: center;
     padding: 3% 0;
     text-transform: uppercase;
+    letter-spacing: 0.4vw;
     color: #557174; }
   .gallery-showtitle {
     font-family: 'Poppins', sans-serif;
@@ -643,14 +652,7 @@ figcaption {
 @media screen and (min-width: 26.25em) {
   .image-main,
   .headshot-main {
-    height: 63vh; }
-  .gallery-menu {
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 11%;
-    padding-top: 0; }
-    .gallery-menu li:not(:last-child) {
-      margin-right: 4%; } }
+    height: 63vh; } }
 
 @media screen and (min-width: 31.25em) {
   .gallery-title {
@@ -941,7 +943,8 @@ li a:hover:before {
 
 .background-work {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  align-items: center; }
   .background-work::before {
     content: '';
     position: fixed;
@@ -1038,8 +1041,9 @@ li a:hover:before {
 @media screen and (min-width: 43.75em) {
   .background-work {
     flex-direction: row;
-    justify-content: space-evenly; }
-  .background-work .container {
+    justify-content: space-evenly;
+    padding: 0 5%; }
+  .background-work .headshot-container {
     margin: 0; }
   .work-info {
     display: flex;
@@ -1051,13 +1055,16 @@ li a:hover:before {
     padding: 1rem;
     width: 50%;
     margin-right: 0.5rem; }
+  .headshot-container,
+  .resume-wrapper {
+    width: 50%; }
+  .resume-wrapper {
+    margin-top: -1.6%; }
   .headshot {
-    width: 60%; }
+    width: 50%; }
   .resume {
-    width: 71%;
-    padding: 0; }
-    .resume-btn {
-      padding: 1.75rem 6vw; } }
+    width: 50%;
+    padding: 0; } }
 
 @media screen and (min-width: 50em) {
   .work-info {

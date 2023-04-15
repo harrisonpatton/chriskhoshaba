@@ -55,6 +55,9 @@ body {
     margin-top: 1.4rem;
     text-transform: uppercase;
     text-align: left;
+    &-bonus {
+      margin-top: 2%;
+    }
   }
 
   &-img {

@@ -1,6 +1,7 @@
 .background-work {
   display: flex;
   flex-direction: column;
+  align-items: center;
   &::before {
     content: '';
     position: fixed;
@@ -121,8 +122,9 @@
   .background-work {
     flex-direction: row;
     justify-content: space-evenly;
+    padding: 0 5%;
   }
-  .background-work .container {
+  .background-work .headshot-container {
     margin: 0;
   }
   .work {
@@ -140,17 +142,23 @@
     }
   }
 
+  .headshot-container,
+  .resume-wrapper {
+    width: 50%;
+  }
+
+  .resume-wrapper {
+    margin-top: -1.6%;
+  }
+
   .headshot {
-    width: 60%;
+    width: 50%;
   }
 
   .resume {
-    width: 71%;
+    width: 50%;
 
     padding: 0;
-    &-btn {
-      padding: 1.75rem 6vw;
-    }
   }
 }
 
