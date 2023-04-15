@@ -977,14 +977,14 @@ li a:hover:before {
   line-height: 3rem; }
 
 .headshot {
-  width: 19rem; }
+  width: 45%; }
   .headshot-container {
     display: flex;
     flex-direction: column;
     align-items: center; }
 
 .resume {
-  width: 22rem;
+  width: 80%;
   text-align: center;
   padding: 5%; }
   .resume:hover {
@@ -993,7 +993,8 @@ li a:hover:before {
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    justify-content: center; }
   .resume-btn {
     padding: 1rem 6vw;
     background-color: #557174;
@@ -1035,6 +1036,11 @@ li a:hover:before {
   opacity: 0.5; }
 
 @media screen and (min-width: 43.75em) {
+  .background-work {
+    flex-direction: row;
+    justify-content: space-evenly; }
+  .background-work .container {
+    margin: 0; }
   .work-info {
     display: flex;
     justify-content: space-evenly;
@@ -1045,8 +1051,13 @@ li a:hover:before {
     padding: 1rem;
     width: 50%;
     margin-right: 0.5rem; }
-  .resume-btn {
-    padding: 1.75rem 6vw; } }
+  .headshot {
+    width: 60%; }
+  .resume {
+    width: 71%;
+    padding: 0; }
+    .resume-btn {
+      padding: 1.75rem 6vw; } }
 
 @media screen and (min-width: 50em) {
   .work-info {
