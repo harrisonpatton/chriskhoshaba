@@ -854,7 +854,7 @@ figcaption {
 .dropdown-menu a,
 .dropdown-menu__home a {
   display: block;
-  padding: 3% 5vw;
+  padding: 0 5vw;
   text-decoration: none;
   color: white;
   font-family: 'Oswald', sans-serif;
