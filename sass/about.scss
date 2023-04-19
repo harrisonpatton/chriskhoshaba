@@ -40,7 +40,6 @@ body {
     margin-top: 4rem;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    padding-bottom: 7%;
     letter-spacing: 0.2vw;
   }
 
@@ -55,6 +54,7 @@ body {
     margin-top: 1.4rem;
     text-transform: uppercase;
     text-align: left;
+    margin-bottom: 3%;
     &-bonus {
       margin-top: 2%;
     }
@@ -110,7 +110,6 @@ body {
 @media screen and (min-width: 46.25em) {
   .about-img-text-container {
     flex-direction: row;
-    align-items: flex-start;
   }
 
   #about-info .container {
@@ -144,6 +143,11 @@ body {
     }
     &-skills {
       font-size: 1.6rem;
+    }
+    &-content {
+      &__paragraph {
+        margin-top: 3%;
+      }
     }
   }
 }
