@@ -1038,13 +1038,14 @@ li a:hover:before {
   width: 90vw; }
 
 #my-image:active {
-  opacity: 0.5; }
+  opacity: 0.51; }
 
 @media screen and (min-width: 43.75em) {
   .background-work {
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 0 5%; }
+    padding: 0 5%;
+    padding-bottom: 2%; }
   .background-work .headshot-container {
     margin: 0; }
   .work-info {
