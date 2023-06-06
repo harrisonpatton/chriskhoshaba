@@ -495,6 +495,11 @@ svg:hover {
   cursor: pointer;
   color: #557174; }
 
+.show-photos-arrow__right, .show-photos-arrow__left {
+  padding: 0 15%;
+  cursor: pointer;
+  color: #f7f7e8; }
+
 .videos-arrow__right, .videos-arrow__left {
   padding: 0 15%;
   cursor: pointer;

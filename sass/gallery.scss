@@ -131,6 +131,15 @@
   }
 }
 
+.show-photos-arrow {
+  &__right,
+  &__left {
+    padding: 0 15%;
+    cursor: pointer;
+    color: #f7f7e8;
+  }
+}
+
 .videos-arrow {
   &__right,
   &__left {
